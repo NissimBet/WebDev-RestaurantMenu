@@ -7,16 +7,26 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Clase de HTML</title>
   <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+    }
+
     code {
       padding-left: 20px;
+      display: inline-block;
+    }
+
+    code span {
+      display: block;
     }
 
     .comment {
       color: rgb(13, 133, 180);
+      display: block;
     }
 
-    .left-padding {
-      padding-left: 20px;
+    .left-margin {
+      margin-left: 20px;
     }
   </style>
 </head>
@@ -44,6 +54,7 @@
       &lt;nombre /&gt;
     </strong>
   </code>
+  <br>
   <code>
     <strong>
       &lt;nombre id="algo"&gt;
@@ -55,38 +66,47 @@
   </code>
 
   <p>una pagina html tiene la estructura:</p>
-  <code>
-    <div>
-      &lt;html&gt;
-      <div class="left-padding">
-        <p>&lt;head&gt;</p>
-        <div class="left-padding">
-          <p>
-            <span>
-              &lt;title&gt;
-                Este es el titulo del sitio
-              &lt;/title&gt;
-            </span>
-          </p>
+  <div>
+    <code>
+        &lt;html&gt;
+      </code>
+    <div class="left-margin">
+      <code>
+          &lt;head&gt;
+        </code>
 
-          <p class="comment">
-            este es el tipo de letras que se tienen
-          </p>
-            
-          <p>
+      <div class="left-margin">
+        <code>
+            &lt;title&gt;
+              Este es el titulo del sitio
+            &lt;/title&gt;
+            <br><br>
+
+            <span class="comment">
+              este es el tipo de letras / teclado que se tienen
+            </span>
             &lt;meta charset="UTF-8"/&gt;
-          </p>
-        </div>
-        &lt;/head&gt;
+          </code>
       </div>
 
-      <br>
-      <br>
-      
-      <div class="left-padding">
-        &lt;body&gt;
-        <h3>Se tienen titulos: </h3>
-        <div class="left-padding">
+      <code>
+          &lt;/head&gt;
+        </code>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="left-margin">
+      <code>
+          &lt;body&gt;
+        </code>
+      <div class="left-margin">
+        <h3 class="left-margin">
+          Se tienen titulos:
+        </h3>
+
+        <div class="left-margin">
           <h1>Este es un titulo, este es el 1</h1>
           <h2>Este es un titulo, este es el 2</h2>
           <h3>Este es un titulo, este es el 3</h3>
@@ -94,9 +114,8 @@
           <h5>Este es un titulo, este es el 5</h5>
           <h6>Este es un titulo, este es el 6</h6>
         </div>
-        <br>
 
-        <div class="left-padding">
+        <div class="left-margin">
           <ul>
             <li>Esta es una lista no ordenada</li>
           </ul>
@@ -106,116 +125,228 @@
           </ol>
         </div>
 
-        <div class="left-padding">
+        <div class="left-margin">
           <p>Hay hyperlinks</p>
-          <code class="left-padding">
-            &lt;a
-              href="https://www.google.com" target="_blank"&gt;
-              <a href="https://www.google.com" target="_blank">Esto va a Google</a>
-            &lt;/a&gt;
-          </code>
-        
+          <code class="left-margin">
+              &lt;a
+                href="https://www.google.com" target="_blank"&gt;
+                <a href="https://www.google.com" target="_blank">Esto va a Google</a>
+              &lt;/a&gt;
+            </code>
+
           <p>Hay Imagenes</p>
-          <code class="left-padding">
-            &lt;img src="ruta de img" alt="descripcion de imagen" /&gt;
-            <img src="/no_tengo_imagenes" alt="No cargo la imagen. ohno">
-          </code>
+          <code class="left-margin">
+              &lt;img src="ruta de img" alt="descripcion de imagen" /&gt;
+              <img src="/no_tengo_imagenes" alt="No cargo la imagen. ohno">
+            </code>
 
           <p>Hay Videos</p>
           <code>
-            &lt;video src="ruta de img" alt="descripcion de imagen" /&gt;
-          </code>
+              &lt;video src="ruta de img" alt="descripcion de imagen" /&gt;
+            </code>
           <img src="/no_tengo_imagenes" alt="No cargo la imagen. ohno">
-        
+
           <p>Hay botones</p>
           <code>
-            &lt;button &gt; Haz click &lt;/button&gt;
+              &lt;button &gt; Haz click &lt;/button&gt;
+            </code>
+          <div class="left-margin">
+            <button onclick="javascript:alert('Click');">Haz click</button>
+          </div>
+        </div>
+        <div class="left-margin">
+          <p>Esta el form, para dar interaccion con el sitio</p>
+
+          <form action="javascript:alert(this)">
+            <code>
+              &lt;form&gt;
+              <br>
+              <span class="left-margin">&lt;fieldset&gt;</span>
+            </code>
+            <div class="left-margin">
+              <fieldset>
+                <code>
+                  &lt;legend&gt;
+                    Titulo del form
+                  &lt;/legend&gt;
+                </code>
+                <legend>Titulo del form</legend>
+
+                <p>Los inputs de texto se escriben asi, a cada uno se le puede asignar un label que lo describe:</p>
+                <code>
+                  &lt;label for="nombre"&gt;
+                    Esto describe el input
+                  &lt;/label&gt;
+                </code>
+                <br>
+                <code>
+                  &lt;input type="text/password/radio/checkbox/email/password" id="id" name="nombre"/&gt;
+                </code>
+                <div class="left-margin">
+                  <label for="nameInput">Tu nombre</label>
+                  <input type="text" name="name" id="nameInput" placeholder="Tu nombre">
+                  <br>
+                  <label for="password">Tu nombre</label>
+                  <input type="password" name="password" id="password" placeholder="Tu pasword">
+                </div>
+                <div>
+                  <p>Los inputs de seleccion se escriben: </p>
+                  <code>
+                    &lt;label for="paisesID"&gt;
+                      Esto describe el select
+                    &lt;/label&gt;
+                    <br>
+                    &lt;select name="paises" id="paisesID"&gt;
+                    <span class="left-margin">
+                      &lt;option value="valor1"&gt;
+                        Primera Opcion
+                      &lt;/option&gt;
+                    </span>
+                    <span class="left-margin">
+                      &lt;option value="valor2"&gt;
+                        Segunda Opcion
+                      &lt;/option&gt;
+                    </span>
+                    &lt;/select&gt;
+                  </code>
+                </div>
+
+                <div class="left-margin">
+                  <label for="paisSelection">Paises</label>
+                  <select name="paises" id="paisSelection">
+                    <option value="Panama">Panama</option>
+                    <option value="Mexico">Mexico</option>
+                  </select>
+                </div>
+
+                <br>
+
+                <p>Los inputs tienen diferentes tipos</p>
+                <div class="left-margin">
+                  <p>Esta el de tipo <i>radio</i></p>
+                  <label>
+                    <input type="radio" name="frutas" value="manzana" />
+                    manzana
+                  </label>
+                  <label>
+                    <input type="radio" name="frutas" value="pina" />
+                    pina
+                  </label>
+                  <label>
+                    <input type="radio" name="frutas" value="pera" />
+                    pera
+                  </label>
+                  <br>
+                  <p>Esta el de tipo <i>checkbox</i></p>
+                  <label>
+                    <input type="checkbox" name="verduras" value="pera" />
+                    pera
+                  </label>
+                  <label>
+                    <input type="checkbox" name="verduras" value="pina" />
+                    pina
+                  </label>
+                  <label>
+                    <input type="checkbox" name="verduras" value="manzana" />
+                    manzana
+                  </label>
+                </div>
+
+              </fieldset>
+
+              <div>
+                <button type="submit">enter</button>
+              </div>
+
+              <code>
+                &lt;/fieldset&gt;
+              </code>
+            </div>
+          </form>
+          <code>
+            &lt;/form&gt;
           </code>
-          <button onclick="javascript:alert('Click');">Haz click</button>
         </div>
 
-  <div class="left-padding">
-    <p>Esta el form, para dar interaccion con el sitio</p>
-    &lt;form&gt;
-    <form action="javascript:alert(this)">
-      &lt;fieldset&gt;
-      <fieldset>
-        <legend>Titulo del form</legend>
-        &lt;input type="tipo" id="id" name="nombre"/&gt;
-        <br>
-        <label for="nameInput">Tu nombre</label>
-        <input type="text" name="name" id="nameInput" placeholder="Tu nombre">
-        <br>
-        <label for="password">Tu nombre</label>
-        <input type="password" name="password" id="password" placeholder="Tu pasword">
-        <br>
-        <br>
-        
-        &lt;select /&gt;
-        <label for="paisSelection"></label>
-        <select name="paises" id="paisSelection">
-          <option value="Panama">Panama</option>
-          <option value="Mexico">Mexico</option>
-        </select>
-        <br><br>
+        <p>Existen tablas</p>
+        <code>
+          &lt;table&gt;
+          <span class="left-margin">
+            &lt;thead&gt;
+            <span class="left-margin">
+              &lt;tr&gt;
+              <span class="left-margin">
+                &lt;th&gt;header de la tabla&lt;/th&gt;
+              </span>
+              <span class="left-margin">
+                &lt;th&gt;otro header de la tabla&lt;/th&gt;
+              </span>
+            &lt;/tr&gt;
+            </span>
+            &lt;/thead&gt;
+          </span>
+          <span class="left-margin">
+            &lt;tbody&gt;
+            <span class="left-margin">
+              &lt;tr&gt;
+              <span class="left-margin">
+                &lt;td&gt;celda de la tabla&lt;/th&gt;
+              </span>
+              <span class="left-margin">
+                &lt;td&gt;otra celda de la tabla&lt;/th&gt;
+              </span>
+            &lt;/tr&gt;
+            </span>
+            &lt;/tbody&gt;
+          </span>
+          <span class="left-margin">
+            &lt;tfooter&gt;
+            <span class="left-margin">
+              &lt;tr&gt;
+              <span class="left-margin">
+                &lt;td&gt;footer de la tabla&lt;/th&gt;
+              </span>
+              <span class="left-margin">
+                &lt;td&gt;otro footer de la tabla&lt;/th&gt;
+              </span>
+            &lt;/tr&gt;
+            </span>
+            &lt;/tfooter&gt;
+          </span>
+          &lt;/table&gt;
+        </code>
 
-        <label>
-          <input type="radio" name="frutas" value="manzana"/>
-          manzana
-        </label>
-        <label>
-          <input type="radio" name="frutas" value="pina"/>
-          pina
-        </label>
-        <label>
-          <input type="radio" name="frutas" value="pera"/>
-          pera
-        </label>
-        <br>
-        <label>
-          <input type="checkbox" name="verduras" value="pera"/>
-          pera
-        </label>
-        <label>
-          <input type="checkbox" name="verduras" value="pina"/>
-          pina
-        </label>
-        <label>
-          <input type="checkbox" name="verduras" value="manzana"/>
-          manzana
-        </label>
+        <table class="left-margin">
+          <thead>
+            <tr>
+              <th>heading 1</th>
+              <th>heading 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hola</td>
+              <td>hola 2 </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>footer</td>
+              <td>footer</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <code>
+        &lt;/body&gt;
+      </code>
+    </div>
 
-      </fieldset>
-      <button type="submit">enter</button>
-      &lt;/fieldset&gt;
-    </form>
-    &lt;/form&gt;
   </div>
-
-  <p>Existen tablas</p>
-  <table>
-    <thead>
-      <tr>
-        <th>heading 1</th>
-        <th>heading 2</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Hola</td>
-        <td>hola 2 </td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <td>footer</td>
-      <td>footer</td>
-    </tfoot>
-  </table>
-  &lt;/body&gt;
-  </div>
-  &lt;/html&gt;
-  </div>
+  <code>
+    &lt;/html&gt;
   </code>
+  </div>
 </body>
 
 </html>

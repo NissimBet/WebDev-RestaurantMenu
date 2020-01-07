@@ -32,8 +32,9 @@
 </head>
 
 <body>
+  <!--------- Intro --------->
   <h1>HTML</h1>
-  <p>HTML es el esqueleto del sitio <br /> Es la plantilla de elementos </p>
+  <p>HTML es el esqueleto del sitio </p><p> Es la plantilla de elementos </p>
   <code>
     <strong>
       &lt;nombre&gt;
@@ -65,6 +66,7 @@
     </strong>
   </code>
 
+  <!--------- Estructura --------->
   <p>una pagina html tiene la estructura:</p>
   <div>
     <code>
@@ -80,7 +82,6 @@
             &lt;title&gt;
               Este es el titulo del sitio
             &lt;/title&gt;
-            <br><br>
 
             <span class="comment">
               este es el tipo de letras / teclado que se tienen
@@ -94,9 +95,7 @@
         </code>
     </div>
 
-    <br>
-    <br>
-
+    <!--------- Headers --------->
     <div class="left-margin">
       <code>
           &lt;body&gt;
@@ -124,29 +123,30 @@
             <li>esta es una lista ordenada</li>
           </ol>
         </div>
-
+        <!--------- Hyperlinks --------->
         <div class="left-margin">
-          <p>Hay hyperlinks</p>
+
+          <h3>Hay hyperlinks</h3>
           <code class="left-margin">
               &lt;a
                 href="https://www.google.com" target="_blank"&gt;
                 <a href="https://www.google.com" target="_blank">Esto va a Google</a>
               &lt;/a&gt;
             </code>
-
-          <p>Hay Imagenes</p>
+          <!--------- Imagenes --------->
+          <h3>Hay Imagenes</h3>
           <code class="left-margin">
               &lt;img src="ruta de img" alt="descripcion de imagen" /&gt;
               <img src="/no_tengo_imagenes" alt="No cargo la imagen. ohno">
             </code>
-
-          <p>Hay Videos</p>
+          <!--------- Videos --------->
+          <h3>Hay Videos</h3>
           <code>
               &lt;video src="ruta de img" alt="descripcion de imagen" /&gt;
             </code>
           <img src="/no_tengo_imagenes" alt="No cargo la imagen. ohno">
-
-          <p>Hay botones</p>
+          <!--------- Botones --------->
+          <h3>Hay botones</h3>
           <code>
               &lt;button &gt; Haz click &lt;/button&gt;
             </code>
@@ -154,13 +154,13 @@
             <button onclick="javascript:alert('Click');">Haz click</button>
           </div>
         </div>
+        <!--------- Form --------->
         <div class="left-margin">
-          <p>Esta el form, para dar interaccion con el sitio</p>
+          <h3>Esta el form, para dar interaccion con el sitio</h3>
 
           <form action="javascript:alert(this)">
             <code>
               &lt;form&gt;
-              <br>
               <span class="left-margin">&lt;fieldset&gt;</span>
             </code>
             <div class="left-margin">
@@ -171,31 +171,44 @@
                   &lt;/legend&gt;
                 </code>
                 <legend>Titulo del form</legend>
-
-                <p>Los inputs de texto se escriben asi, a cada uno se le puede asignar un label que lo describe:</p>
+                <!--------- Input --------->
+                <h3>Los inputs de texto se escriben asi, a cada uno se le puede asignar un label que lo describe:</h3>
                 <code>
                   &lt;label for="nombre"&gt;
                     Esto describe el input
                   &lt;/label&gt;
                 </code>
-                <br>
+              
                 <code>
                   &lt;input type="text/password/radio/checkbox/email/password" id="id" name="nombre"/&gt;
                 </code>
                 <div class="left-margin">
+
                   <label for="nameInput">Tu nombre</label>
                   <input type="text" name="name" id="nameInput" placeholder="Tu nombre">
-                  <br>
+
                   <label for="password">Tu nombre</label>
                   <input type="password" name="password" id="password" placeholder="Tu pasword">
                 </div>
+
+                <!--------- Textarea ---------->
+                <h3>Exite el Textarea que se escribe asi:</h3>
+                <code>
+                  &lt;textarea&gt; name="nombre" &lt;/textarea&gt;
+                </code>
+                <div class="left-margin">
+                  <textarea name="descripcion" cols="30" rows="10">
+  
+                  </textarea>
+                </div>
+                <!--------- Select --------->
                 <div>
-                  <p>Los inputs de seleccion se escriben: </p>
+                  <h3>Los inputs de seleccion se escriben: </h3>
                   <code>
                     &lt;label for="paisesID"&gt;
                       Esto describe el select
                     &lt;/label&gt;
-                    <br>
+
                     &lt;select name="paises" id="paisesID"&gt;
                     <span class="left-margin">
                       &lt;option value="valor1"&gt;
@@ -210,7 +223,6 @@
                     &lt;/select&gt;
                   </code>
                 </div>
-
                 <div class="left-margin">
                   <label for="paisSelection">Paises</label>
                   <select name="paises" id="paisSelection">
@@ -219,11 +231,10 @@
                   </select>
                 </div>
 
-                <br>
-
+                <!--------- Tipos Inpus --------->
                 <p>Los inputs tienen diferentes tipos</p>
                 <div class="left-margin">
-                  <p>Esta el de tipo <i>radio</i></p>
+                  <h3>Esta el de tipo <i>radio</i></h3>
                   <label>
                     <input type="radio" name="frutas" value="manzana" />
                     manzana
@@ -236,8 +247,8 @@
                     <input type="radio" name="frutas" value="pera" />
                     pera
                   </label>
-                  <br>
-                  <p>Esta el de tipo <i>checkbox</i></p>
+
+                  <h3>Esta el de tipo <i>checkbox</i></h3>
                   <label>
                     <input type="checkbox" name="verduras" value="pera" />
                     pera
@@ -267,8 +278,8 @@
             &lt;/form&gt;
           </code>
         </div>
-
-        <p>Existen tablas</p>
+        <!--------- Tablas --------->
+        <h3>Existen tablas</h3>
         <code>
           &lt;table&gt;
           <span class="left-margin">
@@ -337,6 +348,47 @@
           </tfoot>
         </table>
       </div>
+
+      <!--------- Clases y ID --------->
+      <div class="left-margin">
+        <h3>Todos los elementos tienen dos atributos importantes</h3>
+        <div class="left-margin">
+          <h2>El id</h2>
+          <p>
+            Debe ser único en toda la página. Identifica unicamente al elemento dentro de la pagina.
+          </p>
+          <h2>El class</h2>
+          <p>
+            agrupa a elementos
+          </p>
+        </div>
+      </div>
+
+      <!--------- div --------->
+      <div class="left-margin">
+        <h3>Estan el div y el span</h3>
+        <code>
+          &lt;div&gt; contenido &lt;/div&gt;
+          &lt;span&gt; contenido &lt;/span&gt;
+        </code>
+        <div class="left-margin">
+          <p>Son elementos de estructura de tipo bloque</p>
+        </div>
+      </div>
+
+      <!--------- Accesibilidad de HTML --------->
+      <div class="left-margin">
+        <h3>Hay elementos de accesibilidad que ayudan al desarrollador a saber que hace una seccion</h3>
+        <code>
+          &lt;main role=""&gt; &lt;/main&gt; <br>
+          &lt;section role=""&gt; &lt;/section&gt; <br>
+          &lt;header role=""&gt; &lt;/header&gt; <br>
+          &lt;footer role=""&gt; &lt;/footer&gt; <br>
+          &lt;address&gt; &lt;/address&gt; <br>
+          &lt;nav&gt;<span class="left-margin">Indica que contiene la navegacion</span>&lt;/nav&gt; <br>
+        </code>
+      </div>
+
       <code>
         &lt;/body&gt;
       </code>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clase de CSS</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/claseCSS.css" type="text/css">
+</head>
+
+<body>
+  <main>
+    <h1>CSS</h1>
+    <p></p>
+    <h2>Existen 3 formas de agregar estilos a un archivo</h2>
+    <div class="left-margin">
+      <ol>
+        <li>A traves de un archivo externo</li>
+        <li>A traves del tag &lt;style&gt;</li>
+        <li>A traves del atributo "style"</li>
+      </ol>
+      <p>La forma en que se escriben las reglas de estilos es la misma para las 3 formas</p>
+
+      <h3>1. Archivo externo</h3>
+      <div class="left-margin">
+        <code>
+          &lt;link href="url" rel="stylesheet" type="text/css" /&gt;
+        </code>
+      </div>
+
+      <h3>2. Etiqueta style</h3>
+      <div class="left-margin">
+        <code>
+          &lt;style&gt;
+            <span class="left-margin">div { font-size: 16px }</span>
+          &lt;/style&gt;
+        </code>
+      </div>
+
+      <h3>3. Atributo style</h3>
+      <div class="left-margin">
+        <code>
+          &lt;div style="fontSize:16px;"&gt;
+            <span class="left-margin">estilos</span>
+          &lt;/div&gt;
+        </code>
+      </div>
+    </div>
+
+    <div>
+      <h2>Formas de seleccion de elementos</h2>
+      <ul>
+        <li>
+          <p>Por elemento</p>
+          <p><code>div { } </code></p>
+        </li>
+        <li>
+          <p>Por id</p>
+          <p><code>#id { }</code></p>
+        </li>
+        <li>
+          <p>Por clase</p>
+          <p><code>.clase { }</code></p>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Prioridades de seleccion de estilos</h2>
+      <ul>
+        <li>Por id</li>
+        <li>Por clase</li>
+        <li>Por elemento</li>
+      </ul>
+    </div>
+    
+    <div>
+      <h2>Box-Model</h2>
+      <p>Todos los elementos tienen un margen, un padding y un border</p>
+      <p>para el padding
+      </p>
+        <code>
+          padding: 20px;
+          <span class="comment"> da 20 pixeles en todos direcciones</span>
+        
+          padding: 20px 10px;
+          <span class="comment"> da 20 pixeles hacia arriba y 10 hacia los lados</span>
+        
+          padding: 20px 10px 5px 30px;
+          <span class="comment"> da 20, 10, 5 y 30 pixeles hacia arriba, derecha, abajo e izquierda</span>
+          padding-top: 20px;
+          <br>
+          padding-right: 10px;
+          <br>
+          padding-bottom: 5px;
+          <br>
+          padding-left: 30px;
+        </code>
+
+      <div style="border:skyblue 1px dashed; background-color: wheat; width: 300px; text-align: center;">
+        <p>Margen</p>
+        <div style="border: slategray 1px solid; background-color: azure;">
+          <p>padding</p>
+          <div style="border: tomato 1px dotted; background-color:burlywood; height: 50px;;">
+            contenido
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2>Algunos atributos</h2>
+      <ul>
+        <li>
+          <p>font-family</p>
+          <p>Es el font del texto</p>
+        </li>
+        <li>
+          <p>font-size</p>
+          <p>el tamano en pizeles del texto</p>
+        </li>
+        <li>
+          <p>color</p>
+          <p>Puede ser un color predefinido (red, blue, green)</p>
+          <p>Puede ser un numero en hexadecimal</p>
+        </li>
+        <li>
+          <p>border</p>
+          <p>es el borde del elemento</p>
+          <p>tiene un grosor, un estilo y un color</p>
+          <p><code>border: 1px solid red</code></p>
+        </li>
+      </ul>
+    </div>
+
+
+  </main>
+</body>
+
+</html>

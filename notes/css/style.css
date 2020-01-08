@@ -1,0 +1,22 @@
+body {
+  font-family: Cambira, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+code {
+  padding-left: 20px;
+  display: inline-block;
+}
+
+code span {
+  display: block;
+}
+
+.comment {
+  color: rgb(13, 133, 180);
+  display: block;
+}
+
+.left-margin {
+  margin-left: 20px;
+}

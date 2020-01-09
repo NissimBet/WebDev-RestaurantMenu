@@ -23,10 +23,120 @@ fieldset {
   border: 2px dotted #DDD;
 }
 
-table th, table tr:nth-child(2n) {
-  background-color: #aaa7;
+fieldset > span {
+  color:#627880;
+  padding: 20px 30px;
+  display: block;
+  background-color: #CCE9F8;
+
+  min-height: 30px;
+
+  background-image: url("./../assets/Logo.png");
+  background-repeat: no-repeat;
+  background-position: right 50%;
+  background-size: auto 100%;
+
+  border: 1px solid #67788B;
+}
+
+form label {
+  margin: 10px 0;
+  display: block;
+}
+table {
+  margin: 20px auto;
+  border: 1px solid #aaa;
+  border-collapse: separate;
+}
+table th {
+  color: #ffffff;
+  background-color: #545454;
+  text-transform: uppercase;
+}
+tr:hover {
+  background-color: #545454;
+}
+tr:hover td {
+  color: #555;
+}
+th, td {
+  background-color: #eee;
+  color: #999;
+  border: 1px solid #eee;
+  padding: 5px 10px;
 }
 
 .center-text {
   text-align: center;
+}
+
+.form-element {
+  font-size: 1rem;
+  padding: 5px 10px;
+  width: 300px;
+  background-image: none !important;
+}
+
+select[name="rating"] {
+  padding: 5px;
+  font-size: 14px;
+  width: 250px;
+}
+
+.clickable {
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: background-color ease-in 0.25s, 
+              color ease-in-out 0.25s,
+              border-coloer ease-out 0.25s;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border-width: 1px; 
+}
+
+.clickable[id="submitButton"] { 
+  background-color: #56c56f;
+  border-color: #56c56f;
+}
+.clickable[id="resetButton"] {
+  background-color: #D9534F;
+  border-color: #D9534F;
+}
+
+.clickable:hover {
+  background-color: #93c1d4;
+  color: #3166b4;
+  border-color: #627880;
+  opacity: 0.8;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: minmax(auto, 150px) auto;
+  grid-template-rows: 1fr;
+  gap: 10px;
+}
+
+#navigation-bar ul {
+  background-color: #ccc;
+  list-style: none;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+#navigation-bar ul li a {
+  text-decoration: none;
+  color: #333;
+}
+#navigation-bar ul li {
+  padding: 15px 35px;
+}
+#navigation-bar ul li a:hover, #navigation-bar ul li:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #999;
 }

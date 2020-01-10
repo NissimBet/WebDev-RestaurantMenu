@@ -209,15 +209,34 @@
       <form action="#" name="FlexForm">
         <p>direction:</p>
         <div style="display: flex;">
-          <label for="FlexDirectionTrue"><input type="radio"  value="row" name="direction">Row </label>
-          <label for="FlexDirectionFalse"><input type="radio" value="column"  name="direction">Column</label>
-          </div>
+          <label><input type="radio" value="row" name="direction" checked="checked">Row </label>
+          <label><input type="radio" value="column" name="direction">Column</label>
+        </div>
+
+        <p>justify-content:</p>
+        <div style="display: flex;">
+          <label><input type="radio" value="flex-start"     name="justify" checked="checked">flex-start </label>
+          <label><input type="radio" value="flex-end"       name="justify">flex-end</label>
+          <label><input type="radio" value="center"         name="justify">center</label>
+          <label><input type="radio" value="space-evenly"   name="justify">space-evenly</label>
+          <label><input type="radio" value="space-around"   name="justify">space-around</label>
+          <label><input type="radio" value="space-between"  name="justify">space-between  </label>
+        </div>
+
+        <p>align-items:</p>
+        <div style="display: flex;">
+          <label><input type="radio" value="baseline"       name="alignment" checked="checked">baseline</label>
+          <label><input type="radio" value="flex-start"     name="alignment">flex-start </label>
+          <label><input type="radio" value="flex-end"       name="alignment">flex-end</label>
+          <label><input type="radio" value="center"         name="alignment">center</label>
+        </div>
+
       </form>
       <code>display: flex;</code>
       <code>flex-direction: row / column / row-reverse / column-reverse</code>
       <code>align-items: center / baseline / flex-start / flex-end</code>
       <code>justify-content: flex-start / flex-end / space-between / space-evenly / space-around</code>
-      <div class="contenedor" style="display: flex; flex-direction: row; justify-content: space-evenly; max-width: 500px;">
+      <div class="contenedor" id="contenedorShow">
         <div class="hija">
           Hija 1
         </div>
@@ -231,18 +250,49 @@
 
 <script>
   function start() {
-    var radio = document.FlexForm.direction;
-    var prev = null;
-    for(var i = 0; i < radio.length; i++) {
-      radio[i].addEventListener('change', function() {
-        (prev) ? console.log(prev.value) : null;
-        if (this !== prev) {
-          prev = this;
+    var radioDirection = document.FlexForm.direction;
+    var radiojustify = document.FlexForm.justify;
+    var radioAlignment = document.FlexForm.alignment;
+
+    var directionPrev = null;
+    var contenedor = document.getElementById("contenedorShow");
+
+    for (var i = 0; i < radioDirection.length; i++) {
+      radioDirection[i].addEventListener('change', function () {
+        
+        if (this !== directionPrev) {
+          directionPrev = this;
         }
-        console.log(this.value);
+        
+        contenedor.style.flexDirection = this.value;
       })
     }
 
+    var justifyPrev = null;
+
+    for (var i = 0; i < radiojustify.length; i++) {
+      radiojustify[i].addEventListener('change', function () {
+        
+        if (this !== justifyPrev) {
+          justifyPrev = this;
+        }
+        
+        contenedor.style.justifyContent = this.value;
+      })
+    }
+
+    var alignmentPrev = null;
+
+    for (var i = 0; i < radioAlignment.length; i++) {
+      radioAlignment[i].addEventListener('change', function () {
+        
+        if (this !== alignmentPrev) {
+          alignmentPrev = this;
+        }
+        
+        contenedor.style.alignItems = this.value;
+      })
+    }
   }
 
   start();

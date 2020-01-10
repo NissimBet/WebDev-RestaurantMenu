@@ -1,0 +1,13 @@
+.hija {
+  margin: 20px 10px;
+  background-color: rgb(168, 117, 66);
+  padding: 10px;
+}
+
+#contenedorShow {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-evenly; 
+  max-width: 500px;
+  background-color: rgb(146, 194, 102);
+}

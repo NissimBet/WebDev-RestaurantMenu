@@ -197,8 +197,55 @@
       </ol>
     </div>
 
+    <div>
+      <h2>Diseño responsivo</h2>
+      <p>Celulares </p>
+      <code>@media (max-width / min-width : tamano)</code>
+    </div>
 
+    <div>
+      <h2>Flexbox</h2>
+      <p>Organiza elementos automaticamente </p>
+      <form action="#" name="FlexForm">
+        <p>direction:</p>
+        <div style="display: flex;">
+          <label for="FlexDirectionTrue"><input type="radio"  value="row" name="direction">Row </label>
+          <label for="FlexDirectionFalse"><input type="radio" value="column"  name="direction">Column</label>
+          </div>
+      </form>
+      <code>display: flex;</code>
+      <code>flex-direction: row / column / row-reverse / column-reverse</code>
+      <code>align-items: center / baseline / flex-start / flex-end</code>
+      <code>justify-content: flex-start / flex-end / space-between / space-evenly / space-around</code>
+      <div class="contenedor" style="display: flex; flex-direction: row; justify-content: space-evenly; max-width: 500px;">
+        <div class="hija">
+          Hija 1
+        </div>
+        <div class="hija">
+          Hija 2
+        </div>
+      </div>
+    </div>
   </main>
 </body>
+
+<script>
+  function start() {
+    var radio = document.FlexForm.direction;
+    var prev = null;
+    for(var i = 0; i < radio.length; i++) {
+      radio[i].addEventListener('change', function() {
+        (prev) ? console.log(prev.value) : null;
+        if (this !== prev) {
+          prev = this;
+        }
+        console.log(this.value);
+      })
+    }
+
+  }
+
+  start();
+</script>
 
 </html>

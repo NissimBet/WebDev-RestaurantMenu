@@ -140,3 +140,11 @@ select[name="rating"] {
   color: white;
   background-color: #999;
 }
+
+@media screen and (min-width: 521px) and (max-width: 900px) {
+
+}
+
+@media screen and (min-width: 900px) {
+
+}

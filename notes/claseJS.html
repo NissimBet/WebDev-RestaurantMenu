@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clase de JavaScript</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main>
+    <h1>JavaScript</h1>
+    <div class="left-margin">
+      <p>para agregar JavaScript se utiliza el tag <i>script</i></p>
+      <code>&lt;script src="path" type="text/javascript"&gt;&lt;/script&gt;</code>
+
+      <p>Se coloca hasta el final del <b>&lt;body&gt;</b> para que se cargue el codigo despues del contenido</p>
+      <p>las variables se declaran de manera</p>
+      <code>let varName = dato</code>
+      <p>no existen tipos per-se, pero los tipos de los datos pueden ser</p>
+      <ul>
+        <li>number</li>
+        <li>string</li>
+        <li>boolean</li>
+        <li>null</li>
+        <li>undefined</li>
+      </ul>
+
+      <p>tambien se puede usar la clave reservada <i>var</i>, pero esta hace que la variable sea global</p>
+      <h3>=== / ==</h3>
+      <code>=== 
+        <span class="comment">Compara el tipo de los operandos y sus valores</span>
+        <p>4 === '4' => false</p>
+      </code>
+      <br>
+      <code>== 
+        <span class="comment">Compara valor evaluado de los operandos</span>
+        <p>4 == 4 => true</p>
+      </code>
+      <br>
+
+      <h3>Funciones</h3>
+      <p>Existen 2 formas de declarar funciones</p>
+      <ul>
+        <li>Con el <i>Arrow function</i>
+          <code>let nombre = () => {}</code>
+        </li>
+        <li>De la forma normal
+          <code>function nombre() {}</code>
+        </li>
+      </ul>
+      <p>Se le pueden declarar valores default para los parametros de una funcion</p>
+      <code>function suma(p1 = 0; p2 = 0; p3 = 0) { return p1 + p2 + p3 }</code>
+
+      <div>
+        <h3>Arreglos</h3>
+        <p>Los arreglos se declaran</p>
+        <code>let x =[a,b,c];</code>
+        <p>algunos metodos son</p>
+        <ul>
+          <li><code>arr.push(val)</code></li>
+          <li><code>arr.length</code></li>
+          <li><code>arr.pop()</code></li>
+          <li><code>arr.filter()</code></li>
+          <li><code>arr.splice()</code></li>
+          <li><code>arr.map()</code></li>
+          <li><code>arr.slice()</code></li>
+          <li><code>arr.reduce()</code></li>
+          <li><code>arr.find()</code></li>
+          <li><code>arr.indexOf()</code></li>
+        </ul>
+        <div class="left-margin">
+          <h4>Map</h4>
+          <p>El map es un ciclo que no modifica el arreglo, aplicando una funcion sobre los elementos del arreglo original para regresar uno nuevo</p>
+          <code>
+            let nums = [1,2,3,4];
+            <br>
+            let nuevo = nums.map(num => if(num % 2 === 0) { return num / 2; } );
+            <span class="comment">Esto divide entre dos los pares del arreglo original</span>
+          </code>
+        </div>
+
+        <div class="left-margin">
+          <h4>Filter</h4>
+          <p>El filter genera un nuevo arreglo ejecutando una funcion sobre todos los elementos</p>
+          <code>
+            let nums = [1,2,3,4];
+            <br>
+            let pares = nums.filter(num => num % 2 );
+            <span class="comment">Esto regresa un arrego con los numeros pares</span>
+          </code>
+        </div>
+
+        <div class="left-margin">
+          <h4>Splice</h4>
+          <p>El splice tiene 3 parametros</p>
+          <ol>
+            <li>el <i>index</i> de donde se va a hacer algo</li>
+            <li>La cantidad de elementos para remover</li>
+            <li>Los elementos a agregar separados por coma</li>
+          </ol>
+          <code>
+            let nums = [1,2,3,4];
+            <br>
+            nums.splice(0, 1, 5, 6);
+            <span class="comment">Esto elimina el 1 y agrega un 5 y un 6 en ese lugar</span>
+          </code>
+        </div>
+
+        <div class="left-margin">
+          <h4>Slice</h4>
+          <p>El slice hace un substring entre 2 indices</p>
+          <code>
+            let nums = [1,2,3,4];
+            <br>
+            nums.slice(0, 2);
+            <span class="comment">regresa los 2 primeros elementos</span>
+          </code>
+        </div>
+      </div>
+
+      <h3>Objetos</h3>
+      <p>Son diferentes a los objetos en otros lenguajes</p>
+      <code>
+        let obj = {
+          <br>
+          <span class="left-margin">nombre: 'nombre'</span>
+          <span class="left-margin">apellido: 'apellido'</span>
+          <span class="left-margin">edad: 10</span>
+        }
+      </code>
+      <p>Los elementos se pueden acceder de 2 maneras</p>
+      <ul>
+        <li><code>obj.apellido</code></li>
+        <li><code>obj['apellido']</code></li>
+      </ul>
+
+
+      <p>  Cuando se declaran funciones como parte de un objeto, usar la notacion de:</p>
+      <code>function name() {}</code>
+      <p>ya que si se quiere hacer referencia a otro elemento del objeto, se puede usar <i><b>this</b></i></p>
+      <p>que no se tiene en el scope de la arrow function</p> 
+
+
+      <div>
+        <h2>El DOM</h2>
+        <p>Es el Document Object Model</p>
+        <p>Para cada elemento se genera un nodo, JavaScript lo genera automaticamente</p>
+        <p>Se representa como un arbol, donde los atributos son nodos hoja</p>
+        <code>document <span class="comment">apunta a este arbol</span></code> 
+        <p>Cada vez que se modifica dinamicamente el html, el DOM se modifica automaticamente</p>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

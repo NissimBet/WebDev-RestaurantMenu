@@ -250,14 +250,14 @@
 
 <script>
   function start() {
-    var radioDirection = document.FlexForm.direction;
-    var radiojustify = document.FlexForm.justify;
-    var radioAlignment = document.FlexForm.alignment;
+    let radioDirection = document.FlexForm.direction;
+    let radiojustify = document.FlexForm.justify;
+    let radioAlignment = document.FlexForm.alignment;
 
-    var directionPrev = null;
-    var contenedor = document.getElementById("contenedorShow");
+    let directionPrev = null;
+    let contenedor = document.getElementById("contenedorShow");
 
-    for (var i = 0; i < radioDirection.length; i++) {
+    for (let i = 0; i < radioDirection.length; i++) {
       radioDirection[i].addEventListener('change', function () {
         
         if (this !== directionPrev) {
@@ -268,9 +268,9 @@
       })
     }
 
-    var justifyPrev = null;
+    let justifyPrev = null;
 
-    for (var i = 0; i < radiojustify.length; i++) {
+    for (let i = 0; i < radiojustify.length; i++) {
       radiojustify[i].addEventListener('change', function () {
         
         if (this !== justifyPrev) {
@@ -281,9 +281,9 @@
       })
     }
 
-    var alignmentPrev = null;
+    let alignmentPrev = null;
 
-    for (var i = 0; i < radioAlignment.length; i++) {
+    for (let i = 0; i < radioAlignment.length; i++) {
       radioAlignment[i].addEventListener('change', function () {
         
         if (this !== alignmentPrev) {

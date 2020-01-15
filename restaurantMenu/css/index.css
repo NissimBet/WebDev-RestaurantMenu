@@ -26,6 +26,7 @@ fieldset {
 fieldset > span {
   color:#627880;
   padding: 20px 30px;
+  margin-bottom: 20px;
   display: block;
   background-color: #CCE9F8;
 
@@ -77,6 +78,18 @@ th, td {
   background-image: none !important;
 }
 
+.invalid-input {
+  border-color: red;
+  /* background-color: #cc343433; */
+}
+.invalid-input-warning {
+  padding: 5px 10px;
+  border-color: red;
+  background-color: #cc343433;
+  grid-column: 1 / span 2;
+  display: none;
+}
+ 
 select[name="rating"] {
   padding: 5px;
   font-size: 14px;

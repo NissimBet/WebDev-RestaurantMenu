@@ -150,8 +150,49 @@
         <code>document <span class="comment">apunta a este arbol</span></code> 
         <p>Cada vez que se modifica dinamicamente el html, el DOM se modifica automaticamente</p>
       </div>
-    </div>
 
+      <div>
+        <h2>Eventos</h2>
+        <p>Se deben asignar a un elemento especifico.<b> No</b> se puede asignar a una coleccion</p>
+        <code>elem.addEventListener('click', (event) => {})</code>
+        <p>existen muchos eventos, algunos:</p>
+        <ul>
+          <li><i>click</i></li>
+          <li><i>change</i></li>
+          <li><i>submit</i></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>JQuery</h2>
+        <p>JQuery es una libreria de JS que da ventajas al manejo del DOM</p>
+        <p>funciona a traves de selectores</p>
+        <code>https://code.jquery.com/jquery-3.4.1.min.js</code>
+        <code>let menu = $('#menu')</code>
+        <code>$(menu).html()
+          <span class="comment">innerHTML = ""</span>
+        </code>
+        <code>$(menu).append()
+          <span class="comment">innerHTML += data</span>
+        </code>
+        <code>$(menu).text()
+          <span class="comment">texto de un tag</span>
+        </code>
+        <code>$(menu).addClass() / removeClass()
+          <span class="comment">agrega y remueve una clase</span>
+        </code>
+        <code>$(menu).attr('nombe','valor')
+          <span class="comment">modifica un attributo</span>
+        </code>
+        <code>$(menu).parent()</code>
+        <code>$(menu).closest()</code>
+        <code>$(menu).siblings()</code>
+        <code>$(menu).find()</code>
+        <code>$(menu).next()</code>
+        <code>$(menu).children()</code>
+        
+      </div>
+    </div>
   </main>
 </body>
 </html>

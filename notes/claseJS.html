@@ -192,7 +192,72 @@
         <code>$(menu).children()</code>
         
       </div>
+
+      <div>
+        <h2>AJAX</h2>
+        <p>Asynchronous JavaScript And XML</p>
+        <p>llamadas asincronas desde JavaScript</p>
+        <p>Se envian datos a traves de JSON</p>
+        <p>Se hacen llamadas a interfaces de APIs para almacenar informacion en una DB o sacar datos de ella</p>
+        <p>se generan reglas para conectar a un APi, puede pedir diferentes cosas, como autenticacion o datos especificos para encontrar o almacenar la informacion</p>
+        <p>Cuando se hace una llamada a un API se le definen atributos, como el url, parametros (body / data) y el metodo (PUT / POST / GET / DELETE)</p>
+
+        <p>para hacer llamadas de AJAX se hace de forma: </p>
+        <div style="display: flex; flex-direction: row; width: 100%">
+          <!-- Codigo 1 -->
+          <code>
+            <span class="comment">Esto es sin el async / await</span>
+            <span class="comment">settings son los parametros de Headers, method y body del request</span>
+            fetch(url, settings) {
+              <span class="left-margin">
+                <span class="comment">el then ocurre cuando el se regresa una respuesta del fetch, es asincrono</span>
+                .then((response) => {
+                  <span class="left-margin">
+                    console.log(response);
+                    if(response.ok) {
+                      <span class="left-margin">
+                        <span class="comment">si el mensaje es 'ok' regresar la info comom json (esto es asincrono tambien)</span>
+                        return response.json();
+                      </span>
+                    }
+                    <span>
+                      <span class="comment">si no es 'ok', es error</span>
+                      throw new Error(response.statusText);
+                    </span>
+                  </span>
+                })
+                <span>
+                  .then((responseJSON) => {
+                    <span class="left-margin">
+                      console.log(responseJSON);
+                    </span>
+                  })
+                </span>
+  
+              </span>
+            }
+          </code>
+          <!-- codigo 2 -->
+          <code>
+            <span class="comment">la funcion que llama el await debe ser async</span>
+            async function func() {
+              <span class="left-margin">
+                <span>const data = await fetch(url, settings);</span>
+                <span>const jsonData = await data.json();</span>
+                <span>console.log(jsonData);</span>
+              </span>
+            }
+          </code>
+
+        </div>
+
+        <img src="#" alt="La imagen del perro" id="dogImage" width="200px" height="200px" />
+        <button type="button" id="renewPerroImage">Get Perro</button>
+      </div>
+      
     </div>
   </main>
+
+  <script src="./js/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 1200px;
+  margin: 50px auto;
+  min-height: 100%;
+}
+
+
+input {
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+.recipes {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.recipes > div {
+  padding: 20px;
+}
+
+.recipes img {
+  max-width: 100%;
+  margin: 10px 0 20px 0;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+ul li {
+  margin: 3px 0;
+}

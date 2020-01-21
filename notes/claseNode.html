@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Node JS</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Node JS</h1>
+      <div class="left-margin">
+        <p>Node es un manejador de paquetes / librerias para Node</p>
+        <p>
+          Se tiene un package.json, que se contiene las configuraciones del
+          proyecto de Node, scripts relacionados a npm
+        </p>
+        <p>
+          npm install 'package'
+          <span class="comment">instala un paquete</span>
+        </p>
+        <p>
+          npm install
+          <span class="comment">
+            instala todos los packages espcificados en el package.json
+          </span>
+        </p>
+        <p>algunos paquetes son</p>
+        <ul>
+          <li>express</li>
+          <li>React</li>
+          <li></li>
+        </ul>
+      </div>
+
+      <div class="left-margin">
+        <h3>Express</h3>
+        <p>express es un framework que facilita la generacion de un servidor</p>
+
+        <code>
+          <span>import express from 'express';</span>
+          <span>const app = express();</span>
+          <span class="comment">ruta de un api</span>
+          <span>app.get('/', (req, res, next) => console.log("HI");)</span>
+          <span class="comment">servidor escucha en el puerto</span>
+          <span>app.listen(PORT, () => console.log("listening"))</span>
+        </code>
+      </div>
+    </main>
+  </body>
+</html>
